@@ -1,0 +1,15 @@
+{% extends 'shared/base.html' %} {% block content %}
+<div class="loginFrom">
+    <div id="logreg-forms">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button class="btn btn-danger" type="submit">Login</button>
+        <br><br>
+        <h6>Sign up</h6>
+        <a class="btn btn-primary" href="{% url 'masterplanapp:register' %}">REGISTER</a>
+    </form>
+    </div>
+</div>
+{% endblock %}
