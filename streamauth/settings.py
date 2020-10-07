@@ -120,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = '/events/'
+
+LOGOUT_REDIRECT_URL = '/'
+
+TIME_INPUT_FORMATS = ('%I:%M %p',)
