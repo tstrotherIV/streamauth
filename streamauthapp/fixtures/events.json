@@ -1,0 +1,26 @@
+[
+  {
+    "model": "streamauthapp.streamevent",
+    "pk": 1,
+    "fields": {
+      "user_id": 2,
+      "name": "stream1",
+      "description": "multi-cam stream",
+      "stream_embed": "BC3LlFq3lB0",
+      "chat_feed": "BC3LlFq3lB0",
+      "deleted": false
+    }
+  },
+  {
+    "model": "streamauthapp.streamevent",
+    "pk": 2,
+    "fields": {
+      "user_id": 2,
+      "name": "stream2",
+      "description": "multi-cam stream",
+      "stream_embed": "BC3LlFq3lB0",
+      "chat_feed": "BC3LlFq3lB0",
+      "deleted": false
+    }
+  }
+]

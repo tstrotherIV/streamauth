@@ -1,0 +1,35 @@
+<div class="card-body">
+  {% if event.id is not None %}
+      <form id="eventForm" action="{% url 'streamauthapp:event' event.id %}" method="post">
+  {% else %}
+      <form id="eventForm" action="{% url 'streamauthapp:events' %}" method="post">
+  {% endif %}
+      {% csrf_token %}
+      <div class="form-group">
+          <label for="name">Name: </label>
+          <input class="form-control" id="name" type="text" name="name" value="{{ event.name }}">
+      </div>
+      <div class="form-group">
+          <label for="description">Description: </label>
+          <input class="form-control" id="description" type="text" name="description" value="{{ event.description }}">
+      </div>
+      <div class="form-group">
+          <label for="stream_embed">Steam Embed: </label>
+          <input class="form-control" id="stream_embed" type="text" name="stream_embed" value="{{ event.stream_embed }}">
+      </div>
+      <div class="form-group">
+          <label for="chat_feed">Chat Embed: </label>
+          <input class="form-control" id="chat_feed" type="text" name="chat_feed" value="{{ event.chat_feed }}">
+      </div>
+
+      {% if event.id is not None %}
+          <input type="hidden" name="actual_method" value="PUT">
+          <button type="submit" value="Update">Update Details</button>
+      {% else %}
+      <button type="submit" >Save Details</button>
+      {% endif %}
+
+  </form>
+  </div>
+
+  

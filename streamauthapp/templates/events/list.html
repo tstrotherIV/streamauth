@@ -1,0 +1,47 @@
+{% extends 'shared/base.html' %} {% block content %}
+
+<h1>Events List</h1>
+
+<section class="eventList mt-2">
+  {% for event in all_events %}
+  <div class="card event-width">
+    <div class="card-body m-4">
+      <h4 class="card-title">Event Title: {{ event.name }}</h4>
+
+      <h6 class="card-subtitle mb-2 text-muted">
+        Description: {{ event.description }}
+      </h6>
+      <br>
+      <div class="card-subtitle mb-2 text-muted">
+        Embed Code: <input class="form-control" type="text" value='<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ event.stream_embed}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'>
+      </div>
+      <br>
+      <div class="card-subtitle mb-2 text-muted">
+        Chat Code: <input class="form-control" type="text" value='https://www.youtube.com/live_chat?is_popout=1&v={{ event.chat_feed}}'>
+      </div>
+
+    <div class="container mx-0">
+      <div class="d-flex justify-content-start">
+        <form
+          action="{% url 'streamauthapp:event_details' event.id %}"
+          method="GET"
+        >
+          {% csrf_token %}
+          <button class="btn btn-primary m-2">Edit</button>
+        </form>
+
+        <form
+          action="{% url 'streamauthapp:event' event.id %}"
+          method="POST"
+        >
+          {% csrf_token %}
+          <input type="hidden" name="actual_method" value="ARCHIVE" />
+          <button class="btn btn-danger m-2">{% if event.deleted is not None %} Archive {% else %} Delete {% endif %}</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

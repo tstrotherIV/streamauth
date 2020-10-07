@@ -31,7 +31,7 @@ def register_user(request):
             login(request, authenticated_user)
 
             # Redirect the browser to wherever you want to go after registering
-            return redirect(reverse('masterplanapp:home'))
+            return redirect(reverse('streamauthapp:home'))
 
     # handles a request to load the empty form for the user to fill out
     else:
