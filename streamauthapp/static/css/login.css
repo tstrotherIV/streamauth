@@ -1,0 +1,26 @@
+
+.loginFrom {
+  display: flex;
+  justify-content: center;
+}
+
+#logreg-forms{
+  width:412px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color:#f3f3f3;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.registerFrom {
+  display: flex;
+  justify-content: center;
+}
+
+#reg-forms{
+  width:412px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color:#f3f3f3;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}

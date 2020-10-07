@@ -2,7 +2,7 @@
 
 <div class="registerFrom">
   <div id="reg-forms">
-    <form action="{% url 'masterplanapp:register' %}" method="post">
+    <form action="{% url 'streamauthapp:register' %}" method="post">
       {% csrf_token %}
 
       <div class="form-group">
@@ -33,7 +33,7 @@
       <button class="btn btn-danger" type="submit" value="Register">REGISTER</button>
       <br><br>
       <h6>Already have an account?</h6>
-      <a class="btn btn-primary" href="{% url 'masterplanapp:login' %}">LOGIN</a>
+      <a class="btn btn-primary" href="{% url 'streamauthapp:login' %}">LOGIN</a>
     </form>
   </div>
 </div>
