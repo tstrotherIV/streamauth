@@ -17,7 +17,7 @@
       </div>
       <br>
       <div class="card-subtitle mb-2 text-muted">
-        Chat Code: <input class="form-control" type="text" value='https://www.youtube.com/live_chat?is_popout=1&v={{ event.chat_feed}}'>
+        Chat Code: <input class="form-control" type="text" value='{{ event.chat_feed}}'>
       </div>
 
     <div class="container mx-0">
@@ -28,6 +28,15 @@
         >
           {% csrf_token %}
           <button class="btn btn-primary m-2">Edit</button>
+        </form>
+
+        <form
+          action="{% url 'streamauthapp:stream' event.id %}"
+          method="GET"
+          target="_blank"
+        >
+          {% csrf_token %}
+          <button class="btn btn-primary m-2">Stream View</button>
         </form>
 
         <form

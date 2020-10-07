@@ -35,6 +35,7 @@ def event_details(request, event_id):
             event_to_update.description = form_data['description']
             event_to_update.stream_embed = form_data['stream_embed']
             event_to_update.chat_feed = form_data['chat_feed']
+            event_to_update.backgroundIMG = form_data['backgroundIMG']
             
             event_to_update.save()
             

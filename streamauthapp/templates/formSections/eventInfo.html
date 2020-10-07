@@ -21,6 +21,10 @@
           <label for="chat_feed">Chat Embed: </label>
           <input class="form-control" id="chat_feed" type="text" name="chat_feed" value="{{ event.chat_feed }}">
       </div>
+      <div class="form-group">
+        <label for="backgroundIMG">Background Image URL: </label>
+        <input class="form-control" id="backgroundIMG" type="text" name="backgroundIMG" value="{{ event.backgroundIMG }}">
+    </div>
 
       {% if event.id is not None %}
           <input type="hidden" name="actual_method" value="PUT">

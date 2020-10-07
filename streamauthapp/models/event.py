@@ -8,4 +8,5 @@ class StreamEvent(models.Model):
     description = models.CharField(max_length=1000, default=None, blank=True, null=True)
     stream_embed = models.CharField(max_length=1000)
     chat_feed = models.CharField(max_length=1000, default=None, blank=True, null=True)
+    backgroundIMG = models.CharField(max_length=1000, default=None, blank=True, null=True)
     deleted = models.BooleanField(default=False)

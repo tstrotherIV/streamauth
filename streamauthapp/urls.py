@@ -15,4 +15,5 @@ urlpatterns = [
     path('events/form/', event_form, name='event_form'),
     path('events/<int:event_id>/', event_details, name='event'),
     path('form/<int:event_id>', event_details, name='event_details'),
+    path('stream/<int:event_id>/', stream_details, name='stream'),
 ]

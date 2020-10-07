@@ -5,3 +5,4 @@ from .auth.register import register_user
 from .events.details import event_details
 from .events.form import event_form
 from .events.list import event_list
+from .streams.details import stream_details

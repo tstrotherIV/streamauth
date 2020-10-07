@@ -21,6 +21,7 @@ def event_list(request):
             description = form_data['description'],
             stream_embed = form_data['stream_embed'],
             chat_feed = form_data['chat_feed'],
+            backgroundIMG = form_data['backgroundIMG'],
           )
 
 
