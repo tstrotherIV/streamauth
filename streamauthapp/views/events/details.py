@@ -38,7 +38,7 @@ def event_details(request, event_id):
             
             event_to_update.save()
             
-            return HttpResponse(event_id)
+            return redirect(reverse('streamauthapp:events'))
         
 
     if request.method == 'POST':
@@ -54,7 +54,7 @@ def event_details(request, event_id):
                 event_to_archive.save()
 
 
-                return redirect(reverse('streamauthapp:projects'))
+                return redirect(reverse('streamauthapp:events'))
             
     if request.method == 'POST':
         form_data = request.POST
