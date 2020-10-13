@@ -6,8 +6,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from streamauthapp.models import StreamEvent
 
-
-@login_required
+@login_required(login_url='/login/stream')
 def stream_details(request, event_id):
     if request.method == 'GET':
         stream = StreamEvent.objects.get(pk=event_id)

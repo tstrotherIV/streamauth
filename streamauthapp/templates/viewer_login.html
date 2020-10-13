@@ -1,0 +1,16 @@
+{% extends 'shared/streamview.html' %} {% block content %}
+
+<div class="loginFrom">
+    <div id="logreg-forms">
+        <h2>User Login</h2>
+        <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <button class="btn btn-danger" type="submit">Login</button>
+            <br><br>
+            <h6>Sign up</h6>
+            <a class="btn btn-primary" href="{% url 'streamauthapp:register' %}">REGISTER</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
